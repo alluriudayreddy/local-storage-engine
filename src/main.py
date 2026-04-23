@@ -20,7 +20,7 @@ while True:
 
 
 
-    if choice == "1":
+    def handle_add_record():
         name = input("Enter Name: ")
         value = input("Enter Value: ")
 
@@ -41,11 +41,15 @@ while True:
             if duplicate_found:
                 print("Duplicate ID found. Record not added. Please try again.")
             else:
-                create_new_record(record_id, name, int(value))
+                create_new_record(record_id, name, float(value))
                 print("Record added successfully.")
         
         else:
             print("Invalid value. Please enter a valid number.")
+
+
+    if choice == "1":
+        handle_add_record()
 
 
 
@@ -71,7 +75,7 @@ while True:
         new_value = input("Enter new value to update: ")
 
         if is_valid_number(record_id) and is_valid_number(new_value):
-            updated = edit_record(int(record_id), new_name, int(new_value))
+            updated = edit_record(int(record_id), new_name, float(new_value))
 
             if updated:
                 print("Record updated successfully.")

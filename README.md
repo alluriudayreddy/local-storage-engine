@@ -29,7 +29,6 @@ local-storage-engine/
 ├── src/
 │   ├── main.py
 │   ├── engine.py
-│   ├── operations.py
 │   ├── storage.py
 │   ├── models.py
 │   └── utils.py

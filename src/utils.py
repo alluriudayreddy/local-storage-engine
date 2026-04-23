@@ -6,7 +6,7 @@ def generate_id(record_list):
     
 def is_valid_number(value):
     try:
-        int(value)
+        float(value)
         return True
     except:
         return False
