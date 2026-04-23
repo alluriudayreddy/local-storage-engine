@@ -38,8 +38,11 @@ while True:
         if not record_list:
             print("No records found.")
         else:
+            print("\nID | NAME | VALUE")
+            print("--------------------")
+
             for record_item in record_list:
-                print(record_item)
+                print(f'{record_item["id"]} | {record_item["name"]} | {record_item["value"]}')
 
 
 
