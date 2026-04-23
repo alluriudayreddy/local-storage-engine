@@ -25,12 +25,25 @@ while True:
         value = input("Enter Value: ")
 
         if is_valid_number(value):
-            record_id = generate_id(get_all_record_list())
-            create_new_record(record_id, name, int(value))
-            print("Record added successfully.")
+            record_list = get_all_record_list()
+            record_id = generate_id(record_list)
+
+            duplicate_found = False
+
+            for record_item in record_list:
+                if record_item["id"] == record_id:
+                    duplicate_found = True
+                    break
+
+            if duplicate_found:
+                print("Duplicate ID found. Record not added. Please try again.")
+            else:
+                create_new_record(record_id, name, int(value))
+                print("Record added successfully.")
+        
         else:
             print("Invalid value. Please enter a valid number.")
-    
+
 
 
 
@@ -75,7 +88,7 @@ while True:
             while confirm != "Y" and confirm != "n":
                 print("Invalid option. Please enter Y or n.")
                 confirm = input("Are you sure you want to delete? (Y/n): ")
-                
+
             if confirm == "Y":
                 deleted = remove_record(int(record_id))
 
