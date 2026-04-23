@@ -1,9 +1,9 @@
-from engine import create_new_record, get_all_records, edit_record, remove_record
+from engine import create_new_record, get_all_record_list, edit_record, remove_record
 from utils import generate_id, is_valid_number
 
 while True:
     print("\n1. Add Record")
-    print("2. View Records")
+    print("2. View Record_List")
     print("3. Update Record")
     print("4. Delete Record")
     print("5. Exit")
@@ -15,20 +15,20 @@ while True:
         value = input("Enter Value: ")
 
         if is_valid_number(value):
-            record_id = generate_id(get_all_records())
+            record_id = generate_id(get_all_record_list())
             create_new_record(record_id, name, int(value))
             print("Record added.")
         else:
             print("Invalid value.")
     
     elif choice == "2":
-        records = get_all_records()
+        record_list = get_all_record_list()
 
-        if not records:
+        if not record_list:
             print("No records found.")
         else:
-            for record in records:
-                print(record)
+            for record_item in record_list:
+                print(record_item)
 
     elif choice == "3":
         record_id = input("Enter record ID to update: ")
@@ -64,3 +64,4 @@ while True:
 
     else:
         print("Invalid choice.")
+        

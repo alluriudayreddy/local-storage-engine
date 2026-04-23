@@ -16,8 +16,8 @@ def load_data():
             return json.loads(content)
         
     except:
-        return []
+        return[]
     
 def save_data(data):
-    with open(FILE_PATH, "W") as file:
+    with open(FILE_PATH, "w") as file:
         json.dump(data, file, indent=4)
