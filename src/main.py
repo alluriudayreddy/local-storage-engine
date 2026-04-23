@@ -155,5 +155,5 @@ while True:
         break
 
     else:
-        print("Invalid choice. Choose 1-7.")
+        print("Invalid choice. Please Choose 1-7.")
         
