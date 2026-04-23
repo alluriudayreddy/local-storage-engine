@@ -11,3 +11,10 @@ def is_valid_number(value):
     except:
         return False
         
+def is_valid_quantity(value):
+    try:
+        int(value)
+        return True
+    except:
+        return False
+    
