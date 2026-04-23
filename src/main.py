@@ -24,7 +24,10 @@ while True:
         name = input("Enter Name: ")
         value = input("Enter Value: ")
 
-        if is_valid_number(value):
+        if name.strip() == "":
+            print("Name cannot be empty. Please enter a valid name.")
+
+        elif is_valid_number(value):
             record_list = get_all_record_list()
             record_id = generate_id(record_list)
 
