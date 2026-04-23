@@ -112,7 +112,7 @@ while True:
             for record_item in record_list:
                 if record_item["id"] == int(record_id):
                     print("\nID | NAME | VALUE")
-                    print("--------------------")
+                    print("----------------------")
                     print(f'{record_item["id"]} | {record_item["name"]} | {record_item["value"]}')
                     found =True
                     break
