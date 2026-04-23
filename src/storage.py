@@ -13,6 +13,7 @@ def load_data():
 
             if content == "":
                 return []
+            
             return json.loads(content)
         
     except:
