@@ -2,25 +2,40 @@ Local Storage Engine
 
 Description
 
-Local Storage Engine is a modular Python CLI application for managing structured records with persistent local storage.
+Local Storage Engine is a modular Python CLI application for managing product/inventory records with persistent local JSON storage.
 
-The system supports creating, viewing, updating, and deleting records while automatically saving data in a JSON file.
+The system supports creating, viewing, updating, deleting, and searching records through a terminal interface.
 
-Core Features
 
- Create records
- View all records
- Update records by ID
- Delete records by ID
- Automatic save/load system
- Clean modular architecture
+Features
+
+* Add new records
+* View all records
+* Update records by ID
+* Delete records with confirmation
+* Search by ID
+* Search by Name
+* Automatic JSON save/load
+* Input validation
+* Structured modular codebase
+
+Record Fields
+
+* ID
+* Name
+* Price
+* Quantity
+* Category
+* Brand
+* Status
+* Created Time
 
 Tech Stack
 
-Python
-JSON
-File Handling
-CLI Interface
+* Python
+* JSON
+* File Handling
+* CLI
 
 Project Structure
 
@@ -42,36 +57,34 @@ local-storage-engine/
 
 Workflow
 
-1. Load saved data on startup
-2. Accept user input through CLI
-3. Process CRUD operations
-4. Persist updated data automatically
+1. Load records from storage.json
+2. Show CLI menu
+3. Perform CRUD/Search actions
+4. Save updated data automatically
 
 Sample Record
 
 {
-    "id": 1,
-    "name": "Phone",
-    "value": 25000
+  "id": 1,
+  "name": "Phone",
+  "price": 25000,
+  "quantity": 5,
+  "category": "Electronics",
+  "brand": "Samsung",
+  "status": "Active",
+  "created_at": "2026-04-23 10:15:00"
 }
 
-Key Learnings
+Learning Outcomes
 
-Modular Python project structure
-CRUD system logic
-Lists and dictionaries
-JSON persistence
-Separation of concerns
-Basic systems thinking
+* Python modular architecture
+* CRUD systems
+* JSON persistence
+* Validation logic
+* Search logic
+* CLI design
+* Real-world data modeling
 
 Run
 
-python main.py
-
-Future Scope
-
- Search functionality
- Better terminal formatting
- Input validation upgrades
- SQLite / Database migration
- Multi-category storage
+python3 src/main.py
