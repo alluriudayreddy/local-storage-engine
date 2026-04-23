@@ -1,0 +1,22 @@
+[
+    {
+        "id": 2,
+        "name": "tv",
+        "price": 234567.76,
+        "quantity": 32,
+        "category": "elctronics",
+        "brand": "LG",
+        "status": "activve",
+        "created_at": "2026-04-23 16-06-41"
+    },
+    {
+        "id": 3,
+        "name": "mac book",
+        "price": 127543.56,
+        "quantity": 2,
+        "category": "laptops",
+        "brand": "apple",
+        "status": "active",
+        "created_at": "2026-04-23 16-08-33"
+    }
+]
